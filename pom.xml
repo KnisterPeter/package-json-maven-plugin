@@ -12,13 +12,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
-  <name>Smaller</name>
+  <name>package-json-maven-plugin</name>
   <description>
-    Smaller is a minification library. It could be embedded as servlet, OSGi 
-    bundle or be used from ant or maven. Currently it supports CoffeeScript, 
-    Google Closure-Compiler, UglifyJs, LessJs, CssEmbedd and YUICompressor.
+    This mojo reads a package.json file and stores the name and version fields 
+    as properties in the maven build process.
   </description>
-  <url>https://github.com/KnisterPeter/Smaller</url>
+  <url>https://github.com/KnisterPeter/package-json-maven-plugin</url>
 
   <licenses>
     <license>
@@ -37,7 +36,7 @@
 
   <scm>
     <url>https://github.com/KnisterPeter/package-json-maven-plugin</url>
-    <connection>scm:git:https://github.com/KnisterPeter/package-json-maven-plugin.git</connection>
+    <connection>scm:git:git@github.com:KnisterPeter/package-json-maven-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:KnisterPeter/package-json-maven-plugin.git</developerConnection>
   </scm>
 
