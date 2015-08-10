@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>7</version>
+    <version>9</version>
   </parent>
   <groupId>de.matrixweb</groupId>
   <artifactId>package-json-maven-plugin</artifactId>
@@ -149,6 +149,7 @@
                     <versionRange>[3.4,)</versionRange>
                     <goals>
                       <goal>descriptor</goal>
+                      <goal>helpmojo</goal>
                     </goals>
                   </pluginExecutionFilter>
                   <action>
