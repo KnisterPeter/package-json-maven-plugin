@@ -30,15 +30,17 @@ public final class PackageJsonMojo extends AbstractMojo {
   public void execute() throws MojoExecutionException, MojoFailureException {
     if (!skip) {
       File packageJson = new File(workingDirectory, "package.json");
-      try {
-        Properties projectProps = project.getProperties();
-        @SuppressWarnings("unchecked")
-        Map<String, Object> props = new ObjectMapper().readValue(packageJson,
-            Map.class);
-        copyProperty("name", props, projectProps);
-        copyProperty("version", props, projectProps);
-      } catch (IOException e) {
-        throw new MojoExecutionException("Failed to parse package.json", e);
+      if (packageJson.exists()) {
+        try {
+          Properties projectProps = project.getProperties();
+          @SuppressWarnings("unchecked")
+          Map<String, Object> props = new ObjectMapper().readValue(packageJson,
+              Map.class);
+          copyProperty("name", props, projectProps);
+          copyProperty("version", props, projectProps);
+        } catch (IOException e) {
+          throw new MojoExecutionException("Failed to parse package.json", e);
+        }
       }
     }
   }
